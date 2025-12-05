@@ -75,6 +75,19 @@
             width: 100%;
             height: 100%;
         }
+
+        /* --- 版本号标签 --- */
+        .version-tag {
+            position: absolute;
+            bottom: 4px;
+            right: 6px;
+            font-size: 10px;
+            color: rgba(255, 255, 255, 0.4);
+            pointer-events: none;
+            font-family: 'Courier New', monospace;
+            z-index: 25; /* 在UI层之下，但在画布之上 */
+            text-shadow: 1px 1px 0 #000;
+        }
         
         /* --- 遮罩层 --- */
         #ui-layer {
@@ -252,12 +265,14 @@
         <div class="btn-group">
             <button class="small-btn music-btn" id="musicBtn">🎵 开</button>
             <button class="small-btn" id="pauseBtn">暂停</button>
+            <button class="small-btn" onclick="window.open('https://xhslink.com/m/1PMV8pZn41R', '_blank')">主页</button>
         </div>
     </div>
     
     <div id="gameContainer">
         <canvas id="gameCanvas" width="640" height="520"></canvas>
         <div id="pause-overlay">PAUSED</div>
+        <div class="version-tag">Architect kele -Bomberman 1.0</div>
         
         <div id="ui-layer">
             <div id="titleText">建筑师行动</div>
